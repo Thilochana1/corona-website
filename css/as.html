@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+
+    <body>
+
+        <form method="post" action="<?php echo( htmlspecialchars( $_SERVER['PHP_SELF']))?>"
+            enctype="multipart/form-data">
+
+        
+        
+
+      <div class="first">
+            
+            <p>Package Name</p>
+             <input type="text"  name="txtName" >           
+        </div>
+
+        <div class="second">
+            
+            <p>Price</p>
+             <input type="number"  name="txtPrice">          
+        </div>
+
+        <div class="third">
+            
+            <p>Photo1</p>
+             <input type="file"  name="txtPhoto1">          
+        </div>
+
+        <div class="four">
+            
+            <p>Photo2</p>
+            <input type="file"  name="txtPhoto2">           
+        </div>
+
+        <div class="five">
+            
+            <p>Photo3</p>
+            <input type="file"  name="txtPhoto3">        
+        </div>
+
+        <div class="six">
+            
+            <p>Condition</p>
+             <textarea cols="20"  rows="5" name="txtCondition" ></textarea>      
+        </div>
+
+        <div class="seven">
+            
+            <p>Discription</p>
+            <textarea cols="20"  rows="4" name="txtDiscription" ></textarea>    
+        </div>
+
+        
+         <div class="text"><a href="#" class="btn">Send</a></div> 
+
+        
+    </form>
+
+
+   <!--<?php
+    $serverName="localhost";
+    $dbName ="tourweb";
+    $user ="root";
+    $password ="";
+    ?>
+    try
+	{
+		if($_SERVER['REQUEST_METHOD'] == "POST")
+		{
+			$images="";
+			$pic =	$_FILES['txtPic']['name'];
+					
+			   $info = new SplFileInfo($pic);
+			   $newName= $_POST["txtEmail"].'.'.$info->getExtension();
+			   if(move_uploaded_file($_FILES["txtPic"]["tmp_name"], 
+			   './userimages/'.$newName))
+			   {
+			   echo $newName;
+			  
+			   $images='./userimages/'.$newName;
+			   }
+			 
+			   
+		   
+		$conn =new PDO("mysql:host=$serverName;dbname=$dbName",$user,$password);
+		$conn->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+        $query =INSERT INTO `packagea`(`Name`, `Price`, `Photo1`, `Photo2`, `Photo3`, `Discription`, `Condition`) 
+        VALUES (?,?,?,?,?,?,?)
+		$statment= $conn->prepare($query);
+		$statment->execute([$_POST['txtName'],$_POST['txtPrice'],$_POST['txtPhoto1'],$_POST['txtPhoto2'],$_POST['txtPhoto3'],$_POST['txtDiscription'],
+		,$_POST['txtCondition']]);
+		
+		echo 'Package added';
+		}
+		
+	}
+	catch(PDOException $e )
+	{
+		echo("Fail to coonect "+ $e->getMessage());
+	}
+	?>
+
+
+-->
+
+
+    </body>
+
+</html>

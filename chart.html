@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>easy pie chart</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        
+        <style>
+            .b-skills{
+                text-align: center;
+                padding: 45px;
+                border-top: 1px solid #f9f9f9;
+
+            }
+
+            .b-skills:last-child{
+                margin-bottom: -30px;
+            }
+
+            .b-skills h2{
+                margin-bottom: 50px;
+                font-weight: 900;
+                text-transform: uppercase;
+            }
+
+            .skill-item{
+                position: relative;
+                max-width: 250px;
+                width: 100%;
+                margin-bottom: 30px;
+                color: #555;
+            }
+
+            .char-character{
+                position: relative;
+                width: 100%;
+                height: 0;
+                padding-top: 100%;
+                margin-bottom: 27px;
+            }
+
+            .skill-item .char,
+            .skill-item .char canvas{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100% !important;
+                height: 100% !important;
+                
+            }
+
+            .skill-item .chart:before{
+                content: "";
+                width: 0;
+                height: 100%;
+            }
+
+            .skill-item .chart:before,
+            .skill-item .pervent{
+                display: inline-block;
+                vertical-align: middle;
+            }
+
+            .skill-item .percent{
+                position: relative;
+                line-height: 1;
+                font-size: 40px;
+                font-weight: 900;
+                z-index: 2;
+
+            }
+
+            .skill-item .percent:after{
+            content: attr(data-after);
+            font-size: 20px;
+            
+            }
+
+            p{
+                font-weight: 900;
+            }
+
+        
+          
+
+
+        </style>
+    
+    </head>
+    <body>
+
+        <div class="b-skills">
+            <div class="container2">
+                <h2>Sri Lanka</h2>
+                <div class="row">
+                    <div class="col-md-3">
+                        <div calss="skill-item center-block">
+                           <div class="chart-container">
+                            <div class="chart" data-percent="5.59"  data-bar-color="#23afe3">
+                                <span class="percent" data-after="%">5.59%</span>
+                                <h1>Total-53,750</h1>
+                            </div>
+                           </div>
+                           <br><br><br>
+                           <p>Coronavirus Cases:</p>
+                           <p>Conpared with the world:96100000</p>
+                        </div>
+                    </div>
+
+
+
+
+                 <!-- <div class="col-md-3">
+                        <div calss="skill-item center-block">
+                           <div class="chart-container">
+                            <div class="chart" data-percent="1"  data-bar-color="#ff4241">
+                                <span class="percent" data-after="%">1</span>
+                                <h1>Total-270</h1>
+                            </div>
+                           </div>
+                           <br><br><br>
+                           <p>Active Cases:</p>
+                           <p>Conpared with the world</p>
+                        </div>
+                    </div>  -->
+
+
+
+                    <div class="col-md-3">
+                        <div calss="skill-item center-block">
+                           <div class="chart-container">
+                            <div class="chart" data-percent="1"  data-bar-color="#ff4241">
+                                <span class="percent" data-after="%">1</span>
+                                <h1>Total-45,820</h1>
+                                
+                            </div>
+                           </div>
+                           <br><br><br>
+                           <p>Recovered & Discharged</p>
+                           <p>Conpared with the world:52900000</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div calss="skill-item center-block">
+                           <div class="chart-container">
+                            <div class="chart" data-percent="1"  data-bar-color="#23afe3">
+                                <span class="percent" data-after="%">less than 1</span>
+                                <h1>Total-250</h1>
+                                <p>Conpared with the world</p>
+                            </div>
+                           </div>
+                           <br>
+                           <p>Deaths</p>
+                           <p>Conpare with the world:2050000</p>
+                        </div>
+                    </div>
+
+
+
+
+
+                </div>
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+        <script src="plugins/jquery.appear.min.js"></script>
+        <script src="jquery.easypiechart.min.js"></script>
+
+
+
+        <script>
+            'use strict';
+        
+        var $window = $(window);
+        
+        function run()
+        {
+            var fName = arguments[0],
+                aArgs = Array.prototype.slice.call(arguments, 1);
+            try {
+                fName.apply(window, aArgs);
+            } catch(err) {
+                 
+            }
+        };
+         
+        /* chart
+        ================================================== */
+        function _chart ()
+        {
+            $('.b-skills').appear(function() {
+                setTimeout(function() {
+                    $('.chart').easyPieChart({
+                        easing: 'easeOutElastic',
+                        delay: 3000,
+                        barColor: '#369670',
+                        trackColor: '#fff',
+                        scaleColor: false,
+                        lineWidth: 21,
+                        trackWidth: 21,
+                        size: 250,
+                        lineCap: 'round',
+                        onStep: function(from, to, percent) {
+                            this.el.children[0].innerHTML = Math.round(percent);
+                        }
+                    });
+                }, 150);
+            });
+        };
+         
+        
+        $(document).ready(function() {
+          
+            run(_chart);
+          
+            
+        });
+        
+        
+            
+            </script>
+
+    </body>
+
+</html>

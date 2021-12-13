@@ -1,0 +1,90 @@
+body{
+    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../trinc.jpg);
+    height: 120vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.mapdiv{
+    width:700px;
+    margin-top: 250px;
+    /*margin: auto;*/
+    height:1000px;
+}
+
+.mapdiv path {
+    fill: #006400;
+    stroke: #dece0c;
+    stroke-width:4px;
+    transition: fill 0.3s;
+}
+
+.mapdiv :hover {
+    fill:#000;
+}
+
+
+
+
+
+ul{
+    float: right;
+    list-style-type: none;
+    position: relative;
+    top: -520px;
+}
+
+ul li{
+    display: inline-block;
+}
+
+ul li a{
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 20px;
+    border: 1px solid transparent;
+    transition: 0.6s ease;
+    font-size: 40px;
+}
+
+ul li a:hover{
+    background-color:#00bcd4 ;
+    color: #000;
+}
+
+ul li.active a{
+    background-color:#00bcd4 ;
+    color: #000;
+}
+
+.logo img{
+    float: left;
+    width: 150px;
+    height: auto;
+    position: relative;
+    top: -550px;
+}
+
+.mapdiv{
+    position:relative;   /*ここは下に移動するため*/
+    top:-600px; 
+
+}
+
+.red{
+    color: #00bcd4;
+}
+
+.ca{
+    position: relative;
+    width: 1500px;
+    height: 500px;
+    left: 900px;
+    top: 300px;
+
+}
+
+.ca p{
+    font-size: 40px;
+    color: #fff;
+}

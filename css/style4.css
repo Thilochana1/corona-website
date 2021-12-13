@@ -1,0 +1,205 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Century Gothic;
+    box-sizing: border-box;
+}
+
+header{
+    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../me.jpg);
+    height: 120vh;
+    background-size: cover;
+    background-position: center;
+}
+
+ul{
+    float: right;
+    list-style-type: none;
+    margin-top: 25px;
+    
+}
+
+ul li{
+    display: inline-block;
+}
+
+ul li a{
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 20px;
+    border: 1px solid transparent;
+    transition: 0.6s ease;
+    font-size: 40px;
+}
+
+ul li a:hover{
+    background-color:#00bcd4 ;
+    color: #000;
+}
+
+ul li.active a{
+    background-color: #00bcd4;
+    color: #000;
+}
+
+.logo img{
+    float: left;
+    width: 150px;
+    height: auto;
+}
+
+
+
+
+
+
+
+
+
+
+.container{
+    margin: 0 auto;
+    padding: 1rem;
+    width: 1000px;
+    max-width: 100%;
+    font-size: 80px;
+    position:relative;   /*ここは下に移動するため*/
+     top:50px;           /*ここも含めて66と67の両方が必要、下に移動するのに*/
+
+    
+    
+    
+    
+}
+
+.text-center{
+    text-align: center;
+
+}
+
+
+
+nav{
+    border-top: 2px solid #c4c4c4;
+    border-bottom: 2px solid #c4c4c4;
+}
+
+nav ul li{
+    margin: 0 2rem;
+
+}
+
+nav a{
+    color: black;
+    text-decoration: none;
+}
+
+.row{
+    display: flex;
+    
+}
+
+.col{
+    padding: 1rem;
+    flex: 1;
+   
+}
+
+.col:not(:last-child){
+    border-right: 2px solid #c4c4c4;
+}
+
+h3{
+    margin: 10px 0;
+    font-size: 40px;                /*文字の大きさ*/
+    background-color:#00bcd4 ;    /*文字の周りの箱の色*/
+
+}
+
+img{
+    max-width: 70%;
+}
+
+main p{
+    line-height: 1.5rem;
+    letter-spacing: 1px;
+    font-size: 20px;
+    color: #fff;
+}
+
+
+
+
+/*ここからは下の行のニュース*/
+
+
+.container1{
+    margin: 0 auto;
+    padding: 1rem;
+    width: 1000px;
+    max-width: 100%;
+    font-size: 80px;
+    position:relative;   /*ここは下に移動するため*/
+     top:10px;           /*ここも含めて66と67の両方が必要、下に移動するのに*/
+     left: 80px;
+
+    
+    
+    
+    
+}
+
+.text-center{
+    text-align: center;
+
+}
+
+
+
+nav{
+    border-top: 2px solid #c4c4c4;
+    border-bottom: 2px solid #c4c4c4;
+}
+
+nav ul li{
+    margin: 0 2rem;
+
+}
+
+nav a{
+    color: black;
+    text-decoration: none;
+}
+
+.row1{
+    display: flex;
+    
+}
+
+.col1{
+    padding: 1rem;
+    flex: 1;
+   
+}
+
+.col1:not(:last-child){
+    border-right: 2px solid #c4c4c4;
+}
+
+h3{
+    margin: 10px 0;
+    font-size: 40px;                /*文字の大きさ*/
+    background-color:#00bcd4 ;    /*文字の周りの箱の色*/
+
+}
+
+img{
+    max-width: 70%;
+}
+
+main p{
+    line-height: 1.5rem;
+    letter-spacing: 1px;
+    font-size: 20px;
+    color: #fff;
+}

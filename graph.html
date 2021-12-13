@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+     <!-- <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1,
+        shrink-to-fit=no">
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/
+        4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/ SFnGE8
+        fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <title>Graph</title>-->
+        <link rel="stylesheet" tyoe="text/css" href="css/graph.css">
+    </head>
+
+    <body>
+       <div class="ca">
+         <div class="card">
+             <div class="card-body">
+                 <p>Getting started with Chart JS</p>
+                 <hr>
+             </div>
+             <div class="card-body">
+                    <canvas id="myChart"></canvas>
+             </div>
+         </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+
+        <script>
+            var ctx = document.getElementById('myChart').getContext('2d');
+         var chart = new Chart(ctx, {
+    // The type of chart we want to create
+     type: 'bar',
+
+    // The data for our dataset
+    data: {
+        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+        datasets: [{
+            label: 'Confirmed Cases',
+            backgroundColor: 'blue',
+           // borderColor: 'red',
+           // borderWidth:6,
+            data: [16, 10, 5, 2, 20, 30, 45]
+        },{
+            label: 'Recovered',
+            backgroundColor: 'green',
+           // borderColor: 'red',
+           // borderWidth:6,
+            data: [1, 15, 53, 2, 10, 10, 25]
+        },{
+            label: 'Deaths',
+            backgroundColor: 'red',
+           // borderColor: 'red',
+           // borderWidth:6,
+            data: [16, 0, 51, 22, 20, 10, 45]
+        }]
+    },
+
+    // Configuration options go here
+    options: {}
+    });
+        </script>
+     </div>
+
+    </body>
+</html>

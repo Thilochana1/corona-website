@@ -1,0 +1,145 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../vi2.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 110vh;
+}
+
+.loginbox{
+    width: 620px;
+    height: 820px;
+    background: #000;
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    width: 100;
+    border: solid #5B6DCD 10px;
+    padding: 5px;
+    padding: 100px 50px;
+    font-size: 40px;
+}
+
+.avatar{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: -50px;
+    left: calc(50% - 50px);
+}
+
+h1{
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 80px;
+}
+
+
+
+.loginbox p{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+
+
+.loginbox input{
+    width: 100%;
+    margin-bottom: 20px;
+
+}
+
+.loginbox input[type="text"], input[type="password"]
+{
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 30px;
+}
+
+.loginbox input[type="submit"]
+{
+    border: none;
+    outline: none;
+    height: 80px;
+    background: #fb2525;
+    color: #fff;
+    font-size: 60px;
+    border-radius: 50px;
+}
+
+
+.loginbox input [type="submit"]:hover
+{
+    cursor: pointer;
+    background: #ffc107;
+    color: #000;
+
+}
+
+.loginbox a{
+    text-decoration: none;
+    font-size: 40px;
+    line-height: 20px;
+    color: darkgrey;
+}
+
+.loginbox a:hover
+{
+    color: #ffc107;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+ul{
+    float: right;
+    list-style-type: none;
+    margin-top: 25px;
+}
+
+ul li{
+    display: inline-block;
+}
+
+ul li a{
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 20px;
+    border: 1px solid transparent;
+    transition: 0.6s ease;
+    font-size: 40px;
+}
+
+ul li a:hover{
+    background-color:#00bcd4 ;
+    color: #000;
+}
+
+/*ul li.active a{
+    background-color: #fff;
+    color: #000;
+}*/
+
+.logo img{
+    float: left;
+    width: 150px;
+    height: auto;
+}

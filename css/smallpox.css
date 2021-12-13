@@ -1,0 +1,104 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: black;
+}
+
+
+ul{
+    float: right;
+    list-style-type: none;
+    margin-top: 25px;
+    position: relative;
+    right: 30px;
+    
+
+   
+}
+
+ul li{
+    display: inline-block;
+}
+
+ul li a{
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 20px;
+    border: 1px solid transparent;
+    transition: 0.6s ease;
+    font-size: 40px;
+}
+
+ul li a:hover{
+    background-color:#00bcd4 ;
+    color: #000;
+}
+
+ul li.active a{
+    background-color:#00bcd4 ;
+    color: #000;
+}
+
+
+
+.kaka{
+    background-color: rgb(108, 71, 241);
+    margin: 10px;
+    width: 700px;
+    height: 1300px;
+    position: relative;
+    left: 1600px;
+    top: 100px;
+
+}
+
+.kaka h3{
+    color: black;
+    font-size: 50px;
+}
+
+.kaka p{
+    color: black;
+    font-size: 40px;
+}
+
+
+.logo img{
+    position: relative;
+    top: -30px;
+}
+
+
+.card{
+    width: 350px;
+    height: 630px;
+    display: inline-block;
+    border-radius: 10px;      /*円の角を丸くする*/
+    padding: 15px 25px;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 10px 15px;
+    position: relative;
+    right: -100px;
+    top: -600px;
+    background-position: center;
+    background-size: cover;
+
+}
+
+.card1{
+    background-image: url(../sma1.jpg);
+}
+
+.card2{
+    background-image: url(../sma2.jpg);
+}
+
+.card3{
+    background-image: url(../sma3.jpg);
+}
